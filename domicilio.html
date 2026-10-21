@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#263b30" />
+<meta name="description" content="Pide café y antojos de Kaleidoscopio a domicilio en Irapuato, hasta 4 km de la tienda." />
+<title>Pide a domicilio — Kaleidoscopio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/extra.css" />
+</head>
+<body>
+<div class="announcement"><span>IRAPUATO, GTO.</span><span>CAFÉ · LECTURA · ARTE</span><span>UN LUGAR PARA QUEDARTE ↗</span></div>
+<header class="site-header" id="top"><a class="brand" href="index.html" aria-label="Kaleidoscopio inicio"><span class="brand-mark">✳</span><span>kaleidoscopio<small>COFFEE &amp; ART GALLERY</small></span></a><button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button><nav class="nav-links" aria-label="Navegación principal"><a href="index.html#historia">El espacio</a><a href="carta.html">La carta</a><a href="domicilio.html" aria-current="page">Pide a domicilio</a><a href="index.html#arte">Arte &amp; momentos</a><a href="index.html#visitanos" class="nav-cta">Ven a conocernos <span>↗</span></a></nav></header>
+<main>
+<section class="delivery-section section-pad" id="domicilio">
+      <div class="section-label light reveal"><span>03 — HASTA TU PUERTA</span><span>ANTOJOS EN ÓRBITA</span></div>
+      <div class="delivery-heading reveal"><div><p class="eyebrow"><span class="eyebrow-dot"></span> TU CAFÉ, DONDE ESTÉS</p><h2>Un pedacito de<br><em>cielo estrellado</em><br>hasta tu casa.</h2></div><p>Arma tu pedido de muestra, agrega tus favoritos al carrito y prepárate para una pausa deliciosa. Esta demo no envía pedidos reales.</p></div>
+      <div class="delivery-toolbar reveal"><div class="delivery-filters" role="group" aria-label="Filtrar productos"><button class="filter-chip active" data-filter="todos">Todo</button><button class="filter-chip" data-filter="cafe">Café</button><button class="filter-chip" data-filter="frio">Bebidas frías</button><button class="filter-chip" data-filter="dulce">Dulces</button><button class="filter-chip" data-filter="salado">Salados</button></div><div class="cart-counter">✳ <span id="cartCount">0</span> en tu pedido</div></div>
+      <div class="zone-card reveal"><div class="zone-map" id="zoneMap" role="application" aria-label="Mapa de la zona de entrega"></div><div class="zone-panel"><span class="zone-kicker">✳ ZONA DE ENTREGA</span><h3>Entregamos hasta <em>4 km</em> a la redonda.</h3><p>Escribe tu colonia o dirección, toca el mapa o usa tu ubicación para saber si llegamos a ti.</p><form id="zoneForm" class="zone-form"><input id="deliveryAddress" type="text" placeholder="Colonia o dirección en Irapuato" autocomplete="street-address" aria-label="Colonia o dirección" /><button type="submit" class="button button-dark">Verificar dirección <span>↗</span></button><button type="button" id="useLocation" class="button button-outline">Usar mi ubicación <span>◎</span></button></form><p id="zoneStatus" class="zone-status" aria-live="polite">Aún no verificamos tu dirección.</p><p class="zone-hint">Distancia en línea recta desde la tienda (Calle Cortázar, Centro).</p></div></div><div class="delivery-layout"><div class="delivery-products">
+        <article class="delivery-card reveal" data-category="cafe" data-id="latte" data-name="Latte de la noche" data-price="65"><div class="delivery-photo product-latte" role="img" aria-label="Latte con arte en la espuma"></div><div class="delivery-card-body"><div class="product-type">CAFÉ · 12 OZ</div><div class="product-title-row"><h3>Latte de la noche</h3><b>$65</b></div><p>Espresso y leche cremosa para bajar el ritmo.</p><button class="add-to-cart">Agregar <span>＋</span></button></div></article>
+        <article class="delivery-card reveal" data-category="frio" data-id="frappe" data-name="Frappé Vía Láctea" data-price="79"><div class="delivery-photo product-frappe" role="img" aria-label="Bebida fría de café"></div><div class="delivery-card-body"><div class="product-type">BEBIDA FRÍA</div><div class="product-title-row"><h3>Frappé Vía Láctea</h3><b>$79</b></div><p>Café frío, hielo y una nube de crema.</p><button class="add-to-cart">Agregar <span>＋</span></button></div></article>
+        <article class="delivery-card reveal" data-category="dulce" data-id="crepa" data-name="Crepa Luna de Miel" data-price="89"><div class="delivery-photo product-crepa" role="img" aria-label="Crepa dulce con fruta y chocolate"></div><div class="delivery-card-body"><div class="product-type">DULCE · FAVORITO</div><div class="product-title-row"><h3>Crepa Luna de Miel</h3><b>$89</b></div><p>Crepa dulce con chocolate y un toque de magia.</p><button class="add-to-cart">Agregar <span>＋</span></button></div></article>
+        <article class="delivery-card reveal" data-category="salado" data-id="baguette" data-name="Baguette Girasol" data-price="95"><div class="delivery-photo product-baguette" role="img" aria-label="Baguette recién preparada"></div><div class="delivery-card-body"><div class="product-type">SALADO · PARA COMPARTIR</div><div class="product-title-row"><h3>Baguette Girasol</h3><b>$95</b></div><p>Una opción salada para acompañar tu bebida favorita.</p><button class="add-to-cart">Agregar <span>＋</span></button></div></article>
+      </div><aside class="cart-panel reveal"><div class="cart-panel-heading"><span>✳ TU PEDIDO</span><span class="cart-spark">✦</span></div><h3>Lo que se te antoja.</h3><div id="cartItems" class="cart-items"><p class="cart-empty">Tu carrito está esperando su primera estrella.</p></div><div class="cart-total"><span>Total estimado</span><strong id="cartTotal">$0 MXN</strong></div><p id="zoneStatusMini" class="zone-mini">Verifica tu zona en el mapa antes de continuar.</p><button id="checkoutDemo" class="button button-gold checkout-button">Continuar pedido <span>↗</span></button><p class="cart-note">Prototipo visual: no procesa pagos ni envía pedidos reales. Precios ilustrativos.</p><p id="orderFeedback" class="order-feedback" aria-live="polite"></p></aside></div>
+    </section>
+</main>
+<footer class="site-footer"><div class="footer-main"><a class="brand footer-brand" href="index.html"><span class="brand-mark">✳</span><span>kaleidoscopio<small>COFFEE & ART GALLERY</small></span></a><p>Un lugar para saborear<br>el momento presente.</p><a href="#top" class="back-top">VOLVER ARRIBA ↑</a></div><div class="footer-bottom"><span>© <span id="year"></span> KALEIDOSCOPIO — CON CARIÑO, DESDE IRAPUATO.</span><span>CAFÉ · LECTURA · ARTE</span></div></footer>
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="js/delivery.js"></script>
+</body>
+</html>
